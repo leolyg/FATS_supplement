@@ -1,0 +1,33 @@
+defaults:
+  - _self_
+
+random_seed: 42
+device: cpu
+
+# dataset
+dataset: cifar100
+dataset_fraction: 600
+min_samples_per_client: 100
+distribution_type: "niid"
+batch_size: 10
+train_fraction: 1.0
+validation_fraction: 0.1
+test_fraction: 1.0
+num_classes: 100
+
+# training
+num_rounds: 70
+num_clients_per_round: 10
+learning_rate: 0.001
+epochs_per_round: null
+batches_per_round: 10
+same_train_test_clients: True
+method: "FATS"
+
+# unlearning
+unlearning: False
+unlearning_round: 50
+unlearning_clients: [0, 1, 2, 3, 4]
+unlearning_samples: None
+
+results_dir_path: "./results/leaf_cifar100_FATS"

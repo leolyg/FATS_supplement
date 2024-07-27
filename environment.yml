@@ -1,0 +1,26 @@
+name: FATS
+channels:
+  - pytorch
+  - defaults
+  - nvidia
+dependencies:
+  - python
+  - numpy
+  - pytorch=*=*cuda* # Ensure PyTorch is installed with CUDA support
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.7 # Ensure the correct version of CUDA toolkit
+  - pandas
+  - matplotlib
+  - ipykernel
+  - ipywidgets
+  - xgboost
+  - scikit-learn
+  - pip
+  - pip:
+      - tqdm
+      - omegaconf
+      - hydra-core
+      - wget
+      - flwr
+      - "flwr[simulation]"
